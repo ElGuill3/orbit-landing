@@ -14,13 +14,6 @@ const FOUNDERS = [
     linkedin: "https://linkedin.com/in/javierregaladosabates",
   },
   {
-    name: "Sebastián Dulong",
-    role: "Co-Founder & CTO",
-    color: "#6C5CE7",
-    bioKey: "bioSebastian",
-    linkedin: "https://linkedin.com/in/sebastiandulong",
-  },
-  {
     name: "Rodrigo García",
     role: "Co-Founder & CIO",
     color: "#4068D0",

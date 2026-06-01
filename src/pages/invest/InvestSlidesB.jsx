@@ -392,13 +392,6 @@ function EquipoSlide() {
       gradient: "linear-gradient(135deg, #3B82F6, #12B981)",
     },
     {
-      initials: "SD",
-      name: "Sebastián Dulong",
-      role: "Co-Founder & CTO",
-      bio: "Competidor en la Olimpiada Internacional de Matemáticas. Ingeniero cuantitativo con background en investigación económica en ITAM. Lideró equipos de datos en empresas tech multinacionales en LATAM. Arquitecto del stack completo: pipelines de datos, modelos predictivos, ejecución automatizada e infraestructura de riesgo.",
-      gradient: "linear-gradient(135deg, #8B5CF6, #3B82F6)",
-    },
-    {
       initials: "RG",
       name: "Rodrigo García",
       role: "Co-Founder & CIO",
