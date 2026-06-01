@@ -11,16 +11,17 @@ const ContactModal = lazy(() => import("./ContactModal"));
 
 /* ── Helpers ── */
 function getContext(pathname) {
-  if (pathname === "/" || pathname.startsWith("/capital")) return "capital";
+  if (pathname.startsWith("/capital")) return "capital";
   return "default";
 }
 
 function getNavLinks(i18n) {
   return {
     default: [
-      [i18n.nav.capital, "/"],
-      [i18n.nav.team || "Team", "/team"],
-      [i18n.nav.blog || "Blog", "/blog"],
+      [i18n.nav.capital, "/capital"],
+      [i18n.nav.agents || "Agents", "#agents"],
+      [i18n.nav.validation || "Validation", "#validation"],
+      [i18n.nav.perihelio || "Perihelio", "#perihelio"],
     ],
     capital: [
       [i18n.nav.engine, "#engine"],
@@ -90,10 +91,10 @@ function MegaDropdown({ type, isDark, t, accent, onClose, i18n, openModal }) {
       : ACCENTS.intel[isDark ? "dark" : "light"];
 
   const capitalItems = [
-    { icon: "chart", title: i18n.nav.engine || "Engine", desc: i18n.nav.capitalEngineDesc || "Quantitative trading system", link: "/#engine" },
-    { icon: "trending", title: i18n.nav.performance || "Performance", desc: i18n.nav.capitalPerfDesc || "Risk-adjusted returns", link: "/#performance" },
-    { icon: "shield", title: i18n.nav.infraestructura || "Infrastructure", desc: i18n.nav.capitalInfraDesc || "Institutional from day one", link: "/#infra" },
-    { icon: "wallet", title: i18n.nav.terminos || "Terms", desc: i18n.nav.capitalTermsDesc || "Fund terms", link: "/#terms" },
+    { icon: "chart", title: i18n.nav.engine || "Engine", desc: i18n.nav.capitalEngineDesc || "Quantitative trading system", link: "/capital#engine" },
+    { icon: "trending", title: i18n.nav.performance || "Performance", desc: i18n.nav.capitalPerfDesc || "Risk-adjusted returns", link: "/capital#performance" },
+    { icon: "shield", title: i18n.nav.infraestructura || "Infrastructure", desc: i18n.nav.capitalInfraDesc || "Institutional from day one", link: "/capital#infra" },
+    { icon: "wallet", title: i18n.nav.terminos || "Terms", desc: i18n.nav.capitalTermsDesc || "Fund terms", link: "/capital#terms" },
     { icon: "globe", title: i18n.nav.mercado || "Market", desc: i18n.nav.capitalMarketDesc || "Market opportunity", link: "/capital/market" },
     { icon: "signal", title: i18n.nav.timing || "Timing", desc: i18n.nav.capitalTimingDesc || "Market timing analysis", link: "/capital/timing" },
   ];
@@ -414,16 +415,17 @@ export default function Layout({ children }) {
 
   const handleHashLinkClick = (target) => {
     const elementId = target.slice(1);
-    if (location.pathname === "/") {
+    const basePath = ctx === "capital" ? "/capital" : "/";
+    if (location.pathname === basePath) {
       scrollTo(elementId);
     } else {
-      navigate("/" + target);
+      navigate(`${basePath}${target}`);
     }
   };
 
   // Handle cross-page navigation with hash scrolling using polling
   useEffect(() => {
-    if (location.pathname === "/" && location.hash) {
+    if ((location.pathname === "/" || location.pathname === "/capital") && location.hash) {
       const elementId = location.hash.slice(1);
       const startTime = performance.now();
 
@@ -1072,12 +1074,12 @@ export default function Layout({ children }) {
                 }}>{f.colCapital}</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   {[
-                    [f.elFondo, "/"],
+                    [f.elFondo, "/capital"],
                     [f.mercado, "/capital/market"],
                     [f.timing, "/capital/timing"],
-                    [f.orbitEngine, "/#engine"],
-                    [f.performance, "/#performance"],
-                    ["FAQ", "/#faq"],
+                    [f.orbitEngine, "/capital#engine"],
+                    [f.performance, "/capital#performance"],
+                    ["FAQ", "/capital#faq"],
                   ].map(([label, path]) => (
                     <Link key={path} to={path} className="nav-link" style={{
                       fontSize: 13, color: t.textDim, fontWeight: 500,

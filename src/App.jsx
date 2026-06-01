@@ -1,5 +1,5 @@
 import { useState, useEffect, Component, lazy, Suspense } from "react";
-import { Routes, Route, useLocation, Link, Navigate } from "react-router-dom";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
 import { ThemeCtx, THEMES } from "./shared/theme";
 import { LangCtx, translations } from "./shared/i18n";
 import { useSEO } from "./shared/useSEO";
@@ -11,6 +11,7 @@ const LazyAnalytics = lazy(() => import("@vercel/analytics/react").then(m => ({ 
 const LazySpeedInsights = lazy(() => import("@vercel/speed-insights/react").then(m => ({ default: m.SpeedInsights })));
 
 /* ── Lazy-loaded page components for code splitting ── */
+const Home = lazy(() => import("./pages/Home"));
 const CapitalLanding = lazy(() => import("./pages/CapitalLanding"));
 const MarketPage = lazy(() => import("./pages/MarketPage"));
 const WhyNowPage = lazy(() => import("./pages/WhyNowPage"));
@@ -123,8 +124,8 @@ export default function App() {
               <Route path="*" element={
                 <Layout>
                   <Routes>
-                    <Route path="/" element={<CapitalLanding />} />
-                    <Route path="/capital" element={<Navigate to="/" replace />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/capital" element={<CapitalLanding />} />
                     <Route path="/capital/market" element={<MarketPage />} />
                     <Route path="/capital/timing" element={<WhyNowPage />} />
                     <Route path="/team" element={<TeamPage />} />

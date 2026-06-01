@@ -56,6 +56,8 @@ const translations = {
       riskCasesDesc: "Casos reales por industria",
       riskFaqDesc: "Preguntas frecuentes",
       agents: "Agentes",
+      validation: "Validación",
+      perihelio: "Perihelio",
     },
 
     // ── Footer ──
@@ -1535,6 +1537,8 @@ const translations = {
       riskCasesDesc: "Real-world industry cases",
       riskFaqDesc: "Frequently asked questions",
       agents: "Agents",
+      validation: "Validation",
+      perihelio: "Perihelio",
     },
 
     // ── Footer ──

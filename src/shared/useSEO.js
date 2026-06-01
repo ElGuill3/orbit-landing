@@ -6,21 +6,21 @@ const BASE_URL = "https://orbitcapital.ai";
 const SEO_CONFIG = {
   "/": {
     title: {
-      es: "Orbit Capital",
-      en: "Orbit Capital",
+      es: "Orbit - Home",
+      en: "Orbit - Home",
     },
     description: {
-      es: "Primer fondo cuantitativo de LATAM especializado en prediction markets. Infraestructura de trading institucional.",
-      en: "First LATAM quantitative fund specialized in prediction markets. Institutional trading infrastructure.",
+      es: "Orbit combina mercados de predicción, IA y datos en tiempo real para ofrecer inteligencia empresarial, cobertura de riesgos y retornos cuantitativos en América Latina.",
+      en: "Orbit combines prediction markets, AI, and real-time data to deliver business intelligence, risk hedging, and quantitative returns in Latin America.",
     },
     jsonLd: [
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        name: "Orbit Capital",
+        name: "Orbit Capital + Intelligence",
         url: BASE_URL,
         description:
-          "Ecosistema de trading cuantitativo para América Latina basado en mercados de predicción.",
+          "Ecosistema de inteligencia predictiva, cobertura operativa y trading cuantitativo para América Latina basado en mercados de predicción.",
         foundingDate: "2025",
         foundingLocation: {
           "@type": "Place",
@@ -33,9 +33,12 @@ const SEO_CONFIG = {
         knowsAbout: [
           "Prediction Markets",
           "Quantitative Trading",
+          "Business Intelligence",
+          "Risk Management",
           "Polymarket",
           "Kalshi",
           "LATAM Markets",
+          "Operational Hedging",
         ],
         sameAs: [
           "https://x.com/orbitcapitalai",
@@ -53,10 +56,9 @@ const SEO_CONFIG = {
       {
         "@context": "https://schema.org",
         "@type": "SiteNavigationElement",
-        name: ["Capital", "Blog"],
+        name: ["Capital"],
         url: [
-          `${BASE_URL}/`,
-          `${BASE_URL}/blog`,
+          `${BASE_URL}/capital`,
         ],
       },
     ],
