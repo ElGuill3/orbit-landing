@@ -3,13 +3,7 @@ import { useTheme } from "../shared/theme";
 import { createStyles } from "../shared/styles";
 import { SvgIcon, FadeIn, Counter, SectionTag } from "../shared/components";
 import PageHero from "../shared/PageHero";
-
-const GIANTS = [
-  { name: "Susquehanna International Group (SIG)", desc: "Primer market maker institucional dedicado a prediction markets en Kalshi. ~$2T USD en volumen anual. Creó una división de trading dedicada, incrementando liquidez ~30x.", icon: "building" },
-  { name: "Jump Trading", desc: "Gigante de trading algorítmico de Chicago. Entrada como proveedor de liquidez señala que quant funds ven oportunidades de arbitraje y market making.", icon: "trending" },
-  { name: "DRW Trading", desc: "Potencia del trading institucional con expertise en derivados y commodities. Trata los event contracts como derivados financieros legítimos para hedging de black swan events.", icon: "chart" },
-  { name: "Interactive Brokers & ForecastEx", desc: "IBKR (NASDAQ: IBKR) lanzó ForecastEx con Kalshi. Uno de los brokers más respetados de Wall Street estabilizando mercados y reduciendo bid-ask spreads.", icon: "bank" },
-];
+import { useLang } from "../shared/i18n";
 
 const CAPITAL_DATA = [
   { platform: "Kalshi", raised: "$1.59B USD", valuation: "$11B USD", backers: "Sequoia, a16z, Paradigm, CapitalG" },
@@ -22,20 +16,6 @@ const VOLUME_DATA = [
   { year: "2025", poly: 33400, kalshi: 23800, unit: "M" },
 ];
 
-const PROJECTIONS = [
-  { scenario: "Conservador", range: "$60B - $120B USD", color: "#64748b" },
-  { scenario: "Base", range: "$80B - $180B USD", color: "#4F7BE8" },
-  { scenario: "Optimista (World Cup + Election)", range: "$120B - $300B USD", color: "#22c55e" },
-];
-
-const MEDIA_PARTNERS = [
-  { name: "CNN y CNBC", detail: "Partnerships con Kalshi para integrar datos de mercado en tiempo real en cobertura editorial." },
-  { name: "Google", detail: "Integración de datos de Kalshi y Polymarket en búsqueda y Google Finance (noviembre 2025)." },
-  { name: "Dow Jones", detail: "Partnership con Polymarket para distribución de datos a instituciones financieras globales." },
-  { name: "NHL", detail: "Primera liga deportiva mayor en firmar deal de licensing con Kalshi (octubre 2025)." },
-  { name: "X (Twitter)", detail: "Polymarket como partner oficial de prediction markets, integrado con xAI." },
-];
-
 function fmtVol(v) {
   return v >= 1000 ? `$${(v / 1000).toFixed(1)}B` : `$${v}M`;
 }
@@ -43,6 +23,32 @@ function fmtVol(v) {
 export default function MarketPage() {
   const { t } = useTheme();
   const { S } = useMemo(() => createStyles(t), [t]);
+  const { i18n } = useLang();
+  const m = i18n.market;
+
+  const giants = useMemo(() => {
+    const icons = ["building", "trending", "chart", "bank"];
+    return (m.giants || []).map((g, i) => ({
+      ...g,
+      icon: icons[i] || "building"
+    }));
+  }, [m.giants]);
+
+  const projections = useMemo(() => {
+    const colors = ["#64748b", "#4F7BE8", "#22c55e"];
+    const ranges = ["$60B - $120B USD", "$80B - $180B USD", "$120B - $300B USD"];
+    return (m.projScenarios || []).map((s, i) => ({
+      scenario: s,
+      range: ranges[i],
+      color: colors[i],
+    }));
+  }, [m.projScenarios]);
+
+  const counterCallouts = useMemo(() => [
+    { label: m.statPoly, value: 33, suffix: "B" },
+    { label: m.statKalshi, value: 23, suffix: "B" },
+    { label: m.statGrowth, value: 153, suffix: "x" },
+  ], [m.statPoly, m.statKalshi, m.statGrowth]);
 
   const glass = {
     background: t.glassBg, backdropFilter: "blur(16px) saturate(150%)",
@@ -56,20 +62,20 @@ export default function MarketPage() {
   return (
     <>
       <PageHero
-        tag="Validación Institucional"
-        title="Wall Street ya Apostó"
-        description="Los hedge funds más sofisticados del mundo están invirtiendo activamente en prediction markets. No estamos apostando por tecnología especulativa."
+        tag={m.heroTag}
+        title={m.heroTitle}
+        description={m.heroDesc}
       />
 
       {/* Los Gigantes */}
       <section style={{ padding: "80px 0" }}>
         <div style={S.container}>
           <FadeIn>
-            <SectionTag>Smart Money</SectionTag>
-            <h2 style={S.sectionH2}>Los Gigantes de Wall Street ya Están Dentro</h2>
+            <SectionTag>{m.giantsTag}</SectionTag>
+            <h2 style={S.sectionH2}>{m.giantsTitle}</h2>
           </FadeIn>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, marginTop: 32 }}>
-            {GIANTS.map((g, i) => (
+            {giants.map((g, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <div className="card-hover" style={{ ...S.card, padding: "28px 24px" }}>
                   <div style={{ marginBottom: 14 }}><SvgIcon name={g.icon} size={26} color={t.accent} /></div>
@@ -86,18 +92,18 @@ export default function MarketPage() {
       <section style={{ padding: "80px 0", background: t.bgAlt, transition: "background 0.4s" }}>
         <div style={S.container}>
           <FadeIn>
-            <SectionTag>Funding</SectionTag>
-            <h2 style={S.sectionH2}>Capital Institucional Masivo</h2>
+            <SectionTag>{m.fundingTag}</SectionTag>
+            <h2 style={S.sectionH2}>{m.fundingTitle}</h2>
           </FadeIn>
           <FadeIn delay={0.1}>
             <div style={{ ...glass, marginTop: 28, overflow: "auto" }}>
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr>
-                    <th style={th}>Plataforma</th>
-                    <th style={th}>Capital Levantado</th>
-                    <th style={th}>Valuación</th>
-                    <th style={th}>Inversores Clave</th>
+                    <th style={th}>{m.tablePlatform}</th>
+                    <th style={th}>{m.tableRaised}</th>
+                    <th style={th}>{m.tableValuation}</th>
+                    <th style={th}>{m.tableBackers}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -117,11 +123,8 @@ export default function MarketPage() {
           <FadeIn delay={0.2}>
             <div style={{ ...glass, marginTop: 28, borderLeft: `3px solid ${t.accent}` }}>
               <p style={{ margin: 0, fontSize: 14, color: t.text, lineHeight: 1.7 }}>
-                <strong style={{ color: t.heading }}>Nota sobre ICE:</strong>{" "}
-                Intercontinental Exchange (dueña del NYSE) invirtió{" "}
-                <strong style={{ color: t.accent }}>$2B</strong> en Polymarket. Cuando la
-                infraestructura que opera la Bolsa de Nueva York apuesta por prediction
-                markets, la señal es inequívoca.
+                <strong style={{ color: t.heading }}>{m.iceNote}</strong>{" "}
+                {m.iceDetail}
               </p>
             </div>
           </FadeIn>
@@ -132,11 +135,10 @@ export default function MarketPage() {
       <section style={{ padding: "80px 0" }}>
         <div style={S.container}>
           <FadeIn>
-            <SectionTag>Volúmenes</SectionTag>
-            <h2 style={S.sectionH2}>Crecimiento Explosivo</h2>
+            <SectionTag>{m.volumeTag}</SectionTag>
+            <h2 style={S.sectionH2}>{m.volumeTitle}</h2>
             <p style={S.sectionP}>
-              El volumen combinado en las dos plataformas líderes ha crecido más de
-              <strong style={{ color: t.accent }}> 100x</strong> en dos años.
+              {m.volumeDesc}
             </p>
           </FadeIn>
 
@@ -145,10 +147,10 @@ export default function MarketPage() {
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr>
-                    <th style={th}>Año</th>
+                    <th style={th}>{m.tableYear}</th>
                     <th style={th}>Polymarket</th>
                     <th style={th}>Kalshi</th>
-                    <th style={th}>Combinado</th>
+                    <th style={th}>{m.tableCombined}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -179,11 +181,7 @@ export default function MarketPage() {
 
           {/* Counter callouts */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 20, marginTop: 36 }}>
-            {[
-              { label: "Vol. Polymarket 2025", value: 33, suffix: "B" },
-              { label: "Vol. Kalshi 2025", value: 23, suffix: "B" },
-              { label: "Crecimiento 2023-2025", value: 153, suffix: "x" },
-            ].map((c, i) => (
+            {counterCallouts.map((c, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <div style={{ ...glass, textAlign: "center" }}>
                   <div style={{ fontSize: 36, fontWeight: 800, color: t.accent, lineHeight: 1.1 }}>
@@ -201,11 +199,10 @@ export default function MarketPage() {
       <section style={{ padding: "80px 0", background: t.bgAlt, transition: "background 0.4s" }}>
         <div style={S.container}>
           <FadeIn>
-            <SectionTag>Proyección</SectionTag>
-            <h2 style={S.sectionH2}>Proyección 2026-2028</h2>
+            <SectionTag>{m.projTag}</SectionTag>
+            <h2 style={S.sectionH2}>{m.projTitle}</h2>
             <p style={S.sectionP}>
-              Bajo tres escenarios, el volumen anual combinado podría alcanzar entre{" "}
-              <strong style={{ color: t.accent }}>$60B y $300B</strong> en los próximos tres años.
+              {m.projDesc}
             </p>
           </FadeIn>
 
@@ -214,12 +211,12 @@ export default function MarketPage() {
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr>
-                    <th style={th}>Escenario</th>
-                    <th style={th}>Volumen Anual Estimado</th>
+                    <th style={th}>{m.tableScenario}</th>
+                    <th style={th}>{m.tableEstVolume}</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {PROJECTIONS.map((p) => (
+                  {projections.map((p) => (
                     <tr key={p.scenario}>
                       <td style={{ ...td, fontWeight: 600, color: t.heading }}>
                         <span style={{ display: "inline-block", width: 10, height: 10, borderRadius: "50%", background: p.color, marginRight: 10 }} />
@@ -235,14 +232,9 @@ export default function MarketPage() {
 
           <FadeIn delay={0.2}>
             <div style={{ marginTop: 32 }}>
-              <h4 style={{ color: t.heading, fontSize: 16, marginBottom: 14 }}>Catalizadores Clave</h4>
+              <h4 style={{ color: t.heading, fontSize: 16, marginBottom: 14 }}>{m.catalystsTitle}</h4>
               <ul style={{ margin: 0, paddingLeft: 20 }}>
-                {[
-                  "2026: Consolidación institucional. Polymarket aprobación CFTC. Elecciones intermedias EE.UU.",
-                  "2027: Mainstream adoption. Integración con brokers tradicionales. Productos derivados sobre event contracts.",
-                  "2028: Elección Presidencial EE.UU. podría multiplicar 3-5x los volúmenes actuales.",
-                  "Copa Mundial FIFA 2026 en Norteamérica podría generar $100B+ en volumen.",
-                ].map((c, i) => (
+                {(m.catalystsList || []).map((c, i) => (
                   <li key={i} style={{ color: t.text, fontSize: 14, marginBottom: 8, lineHeight: 1.6 }}>{c}</li>
                 ))}
               </ul>
@@ -255,16 +247,16 @@ export default function MarketPage() {
       <section style={{ padding: "80px 0" }}>
         <div style={S.container}>
           <FadeIn>
-            <SectionTag>Medios</SectionTag>
-            <h2 style={S.sectionH2}>Validación de Medios</h2>
-            <p style={S.sectionP}>Los principales medios y plataformas del mundo ya integran datos de prediction markets en su cobertura.</p>
+            <SectionTag>{m.mediaTag}</SectionTag>
+            <h2 style={S.sectionH2}>{m.mediaTitle}</h2>
+            <p style={S.sectionP}>{m.mediaDesc}</p>
           </FadeIn>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 32 }}>
-            {MEDIA_PARTNERS.map((m, i) => (
+            {(m.mediaList || []).map((mItem, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <div style={{ ...glass, display: "flex", flexDirection: "column", gap: 8 }}>
-                  <h4 style={{ margin: 0, fontSize: 18, color: t.heading }}>{m.name}</h4>
-                  <p style={{ margin: 0, fontSize: 14, color: t.textMuted, lineHeight: 1.6 }}>{m.detail}</p>
+                  <h4 style={{ margin: 0, fontSize: 18, color: t.heading }}>{mItem.name}</h4>
+                  <p style={{ margin: 0, fontSize: 14, color: t.textMuted, lineHeight: 1.6 }}>{mItem.detail}</p>
                 </div>
               </FadeIn>
             ))}
@@ -276,16 +268,11 @@ export default function MarketPage() {
       <section style={{ padding: "80px 0", background: t.bgAlt, transition: "background 0.4s" }}>
         <div style={S.container}>
           <FadeIn>
-            <SectionTag>Relevancia</SectionTag>
-            <h2 style={S.sectionH2}>Por Qué Importa para Orbit</h2>
+            <SectionTag>{m.relevanceTag}</SectionTag>
+            <h2 style={S.sectionH2}>{m.relevanceTitle}</h2>
           </FadeIn>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24, marginTop: 32 }}>
-            {[
-              { title: "Timing Perfecto", text: "Entramos en la fase de adopción temprana institucional (Early Majority), no en la fase especulativa." },
-              { title: "Liquidez Garantizada", text: "Market makers institucionales permiten ejecutar estrategias a escala sin impacto de mercado hasta $50-100M USD en AUM." },
-              { title: "Legitimidad del Mercado", text: "Bloomberg, CNN y Google ya consideran prediction markets fuentes legítimas de datos." },
-              { title: "Runway de Crecimiento", text: "Mercado proyectado a crecer 3-5x en 3 años. Infraestructura para un mercado validado por el smart money." },
-            ].map((r, i) => (
+            {(m.relevanceList || []).map((r, i) => (
               <FadeIn key={i} delay={i * 0.09}>
                 <div style={{ ...glass, height: "100%", borderTop: `3px solid ${t.accent}`, display: "flex", flexDirection: "column", gap: 10 }}>
                   <h4 style={{ margin: 0, fontSize: 18, color: t.heading }}>{r.title}</h4>

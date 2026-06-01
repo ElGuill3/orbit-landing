@@ -1340,6 +1340,145 @@ const translations = {
 
     // ── PageHero / Back ──
     back: "Volver",
+
+    // ── Market Page ──
+    market: {
+      heroTag: "Validación Institucional",
+      heroTitle: "Wall Street ya Apostó",
+      heroDesc: "Los hedge funds más sofisticados del mundo están invirtiendo activamente en prediction markets. No estamos apostando por tecnología especulativa.",
+      giantsTag: "Smart Money",
+      giantsTitle: "Los Gigantes de Wall Street ya Están Dentro",
+      giants: [
+        { name: "Susquehanna International Group (SIG)", desc: "Primer market maker institucional dedicado a prediction markets en Kalshi. ~$2T USD en volumen anual. Creó una división de trading dedicada, incrementando liquidez ~30x." },
+        { name: "Jump Trading", desc: "Gigante de trading algorítmico de Chicago. Entrada como proveedor de liquidez señala que quant funds ven oportunidades de arbitraje y market making." },
+        { name: "DRW Trading", desc: "Potencia del trading institucional con expertise en derivados y commodities. Trata los event contracts como derivados financieros legítimos para hedging de black swan events." },
+        { name: "Interactive Brokers & ForecastEx", desc: "IBKR (NASDAQ: IBKR) lanzó ForecastEx con Kalshi. Uno de los brokers más respetados de Wall Street estabilizando mercados y reduciendo bid-ask spreads." }
+      ],
+      fundingTag: "Funding",
+      fundingTitle: "Capital Institucional Masivo",
+      tablePlatform: "Plataforma",
+      tableRaised: "Capital Levantado",
+      tableValuation: "Valuación",
+      tableBackers: "Inversores Clave",
+      iceNote: "Nota sobre ICE:",
+      iceDetail: "Intercontinental Exchange (dueña del NYSE) invirtió $2B en Polymarket. Cuando la infraestructura que opera la Bolsa de Nueva York apuesta por prediction markets, la señal es inequívoca.",
+      volumeTag: "Volúmenes",
+      volumeTitle: "Crecimiento Explosivo",
+      volumeDesc: "El volumen combinado en las dos plataformas líderes ha crecido más de 100x en dos años.",
+      tableYear: "Año",
+      tableCombined: "Combinado",
+      statPoly: "Vol. Polymarket 2025",
+      statKalshi: "Vol. Kalshi 2025",
+      statGrowth: "Crecimiento 2023-2025",
+      projTag: "Proyección",
+      projTitle: "Proyección 2026-2028",
+      projDesc: "Bajo tres escenarios, el volumen anual combinado podría alcanzar entre $60B y $300B en los próximos tres años.",
+      tableScenario: "Escenario",
+      tableEstVolume: "Volumen Anual Estimado",
+      projScenarios: [
+        "Conservador",
+        "Base",
+        "Optimista (World Cup + Election)"
+      ],
+      catalystsTitle: "Catalizadores Clave",
+      catalystsList: [
+        "2026: Consolidación institucional. Polymarket aprobación CFTC. Elecciones intermedias EE.UU.",
+        "2027: Mainstream adoption. Integración con brokers tradicionales. Productos derivados sobre event contracts.",
+        "2028: Elección Presidencial EE.UU. podría multiplicar 3-5x los volúmenes actuales.",
+        "Copa Mundial FIFA 2026 en Norteamérica podría generar $100B+ en volumen."
+      ],
+      mediaTag: "Medios",
+      mediaTitle: "Validación de Medios",
+      mediaDesc: "Los principales medios y plataformas del mundo ya integran datos de prediction markets en su cobertura.",
+      mediaList: [
+        { name: "CNN y CNBC", detail: "Partnerships con Kalshi para integrar datos de mercado en tiempo real en cobertura editorial." },
+        { name: "Google", detail: "Integración de datos de Kalshi y Polymarket en búsqueda y Google Finance (noviembre 2025)." },
+        { name: "Dow Jones", detail: "Partnership con Polymarket para distribución de datos a instituciones financieras globales." },
+        { name: "NHL", detail: "Primera liga deportiva mayor en firmar deal de licensing con Kalshi (octubre 2025)." },
+        { name: "X (Twitter)", detail: "Polymarket como partner oficial de prediction markets, integrado con xAI." }
+      ],
+      relevanceTag: "Relevancia",
+      relevanceTitle: "Por Qué Importa para Orbit",
+      relevanceList: [
+        { title: "Timing Perfecto", text: "Entramos en la fase de adopción temprana institucional (Early Majority), no en la fase especulativa." },
+        { title: "Liquidez Garantizada", text: "Market makers institucionales permiten ejecutar estrategias a escala sin impacto de mercado hasta $50-100M USD en AUM." },
+        { title: "Legitimidad del Mercado", text: "Bloomberg, CNN y Google ya consideran prediction markets fuentes legítimas de datos." },
+        { title: "Runway de Crecimiento", text: "Mercado proyectado a crecer 3-5x en 3 años. Infraestructura para un mercado validado por el smart money." }
+      ]
+    },
+
+    // ── Why Now Page (Timing) ──
+    whyNow: {
+      heroTag: "Timing",
+      heroTitle: "¿Por Qué Ahora?",
+      heroDesc: "Cuatro fuerzas masivas están convergiendo para crear una oportunidad única en una década.",
+      t1Tag: "Tailwind 1",
+      t1Title: "Explosión de Agentes de IA",
+      t1Desc: "Los agentes autónomos de IA están pasando de demos a producción. Las empresas más grandes del mundo ya los despliegan — y todos necesitan datos estructurados como input.",
+      t1Agents: [
+        { name: "GPT-4 / OpenAI", detail: "Function-calling agents para research, trading y ops." },
+        { name: "Claude / Anthropic", detail: "Computer-use agents que navegan sistemas complejos." },
+        { name: "Grok / xAI", detail: "Agente nativo de X con acceso a datos en tiempo real." }
+      ],
+      t1DeployTitle: "Despliegues Enterprise",
+      t1Deployments: [
+        { org: "Goldman Sachs", use: "Agents para research y due diligence" },
+        { org: "McKinsey", use: "Lilli — agent interno para 30K+ consultores" },
+        { org: "Walmart", use: "Agents para supply chain y pricing" },
+        { org: "Palantir AIP", use: "$1B ARR — agents para defensa y enterprise" }
+      ],
+      t1InsightLabel: "Insight clave:",
+      t1InsightText: "Los agentes de IA necesitan contexto estructurado para LATAM — probabilidades calibradas, datos regulatorios, sentiment político — y ese contexto no existe hoy. Orbit lo crea.",
+      t2Tag: "Tailwind 2",
+      t2Title: "Grok y X: Stack de Inteligencia en Tiempo Real",
+      t2Desc: "xAI Grok tiene acceso nativo a X (Twitter). Combinados, forman el stack de inteligencia en tiempo real más poderoso del mundo.",
+      t2List: [
+        "Acceso nativo a 500M+ posts diarios en X",
+        "Análisis de sentiment en tiempo real",
+        "México: X es la plataforma política primaria",
+        "Grok convierte caos de datos en inteligencia estructurada",
+        "Monitoreo 24/7 de narrativas políticas y económicas"
+      ],
+      t2InsightLabel: "Nuestra ventaja:",
+      t2InsightText: "Orbit convierte el caos de 500M+ posts diarios en inteligencia estructurada y accionable para inversores y corporativos en LATAM.",
+      t3Tag: "Tailwind 3",
+      t3Title: "Prediction Markets se Vuelven Mainstream",
+      t3Desc: "La elección de 2024 fue el punto de inflexión. Los prediction markets pasaron de nicho cripto a herramienta mainstream de toma de decisiones.",
+      t3Stats: [
+        { stat: "$3.6B", label: "Volumen Polymarket en elección 2024" },
+        { stat: "CFTC", label: "Validación regulatoria de event contracts" },
+        { stat: "Metaculus", label: "Estándar de calibración para labs de IA" }
+      ],
+      t3InsightLabel: "El problema:",
+      t3InsightText: "Los datos de prediction markets están fragmentados entre múltiples plataformas y no están empaquetados para consumo enterprise. No hay API unificada, no hay consenso cross-platform, no hay análisis LATAM.",
+      t4Tag: "Tailwind 4",
+      t4Title: "El Momento Político de México",
+      t4Desc: "México atraviesa el período de mayor incertidumbre regulatoria y política en décadas — exactamente cuando la demanda por inteligencia predictiva es máxima.",
+      t4List: [
+        "Elecciones intermedias 2026 — 15 carreras gubernamentales",
+        "Reforma judicial en implementación — incertidumbre masiva",
+        "Política energética en transición — impacto en $50B+ de inversión",
+        "Boom de nearshoring — $35B en inversiones 2024",
+        "México recibe más FDI que China por primera vez",
+        "Consultas populares y cambios constitucionales frecuentes"
+      ],
+      t4Stats: [
+        { value: 35, suffix: "B", label: "FDI en México 2024" },
+        { value: 15, suffix: "", label: "Carreras Gubernamentales 2026" },
+        { value: 50, suffix: "B+", label: "Inversión impactada por política energética" }
+      ],
+      t5Tag: "Orbit + IA",
+      t5Title: "Por Qué Orbit Escala CON IA",
+      t5Desc: "La narrativa de \"SaaS muere con IA\" no aplica cuando tu producto es data primaria que ninguna IA puede generar por sí sola.",
+      t5List: [
+        { title: "API-First Pricing", text: "Cobro por consulta/endpoint. Más agentes de IA = más revenue. El crecimiento de IA nos beneficia directamente." },
+        { title: "Moat de Regulación Local", text: "Entender CNBV, INE, INEGI requiere contexto que ningún LLM tiene out-of-the-box. Orbit empaqueta ese contexto." },
+        { title: "Console + APIs", text: "Humanos usan la consola, agentes usan la API. Mismo dato, dos interfaces, doble mercado." },
+        { title: "Consensus Data Primario", text: "Ninguna IA puede generar probabilidades calibradas de mercado — se necesitan participantes reales apostando dinero real." }
+      ],
+      t5InsightLabel: "La tesis:",
+      t5InsightText: "Orbit provee datos de consenso primarios — probabilidades calibradas respaldadas por dinero real — que ningún LLM puede fabricar. Más agentes de IA en el mundo = más clientes para Orbit."
+    },
   },
 
   en: {
@@ -2677,6 +2816,145 @@ const translations = {
 
     // ── PageHero / Back ──
     back: "Back",
+
+    // ── Market Page ──
+    market: {
+      heroTag: "Institutional Validation",
+      heroTitle: "Wall Street Already Bet",
+      heroDesc: "The world's most sophisticated hedge funds are actively investing in prediction markets. We are not betting on speculative technology.",
+      giantsTag: "Smart Money",
+      giantsTitle: "Wall Street Giants are Already In",
+      giants: [
+        { name: "Susquehanna International Group (SIG)", desc: "First institutional market maker dedicated to prediction markets on Kalshi. ~$2T USD in annual volume. Created a dedicated trading division, increasing liquidity ~30x." },
+        { name: "Jump Trading", desc: "Algorithmic trading giant from Chicago. Entry as a liquidity provider signals that quant funds see arbitrage and market-making opportunities." },
+        { name: "DRW Trading", desc: "Institutional trading powerhouse with derivatives and commodities expertise. Treats event contracts as legitimate financial derivatives to hedge black swan events." },
+        { name: "Interactive Brokers & ForecastEx", desc: "IBKR (NASDAQ: IBKR) launched ForecastEx with Kalshi. One of Wall Street's most respected brokers stabilizing markets and reducing bid-ask spreads." }
+      ],
+      fundingTag: "Funding",
+      fundingTitle: "Massive Institutional Capital",
+      tablePlatform: "Platform",
+      tableRaised: "Capital Raised",
+      tableValuation: "Valuation",
+      tableBackers: "Key Investors",
+      iceNote: "Note on ICE:",
+      iceDetail: "Intercontinental Exchange (owner of the NYSE) invested $2B in Polymarket. When the infrastructure that operates the New York Stock Exchange bets on prediction markets, the signal is unmistakable.",
+      volumeTag: "Volumes",
+      volumeTitle: "Explosive Growth",
+      volumeDesc: "Combined volume on the two leading platforms has grown more than 100x in two years.",
+      tableYear: "Year",
+      tableCombined: "Combined",
+      statPoly: "Polymarket Vol. 2025",
+      statKalshi: "Kalshi Vol. 2025",
+      statGrowth: "Growth 2023-2025",
+      projTag: "Projection",
+      projTitle: "2026-2028 Projection",
+      projDesc: "Under three scenarios, combined annual volume could reach between $60B and $300B over the next three years.",
+      tableScenario: "Scenario",
+      tableEstVolume: "Estimated Annual Volume",
+      projScenarios: [
+        "Conservative",
+        "Base",
+        "Optimistic (World Cup + Election)"
+      ],
+      catalystsTitle: "Key Catalysts",
+      catalystsList: [
+        "2026: Institutional consolidation. CFTC approval for Polymarket. U.S. midterm elections.",
+        "2027: Mainstream adoption. Integration with traditional brokers. Derivative products on event contracts.",
+        "2028: U.S. Presidential Election could multiply current volumes by 3-5x.",
+        "2026 FIFA World Cup in North America could generate $100B+ in volume."
+      ],
+      mediaTag: "Media",
+      mediaTitle: "Media Validation",
+      mediaDesc: "The world's leading media outlets and platforms already integrate prediction market data into their coverage.",
+      mediaList: [
+        { name: "CNN and CNBC", detail: "Partnerships with Kalshi to integrate real-time market data in editorial coverage." },
+        { name: "Google", detail: "Integration of Kalshi and Polymarket data in Search and Google Finance (November 2025)." },
+        { name: "Dow Jones", detail: "Partnership with Polymarket for data distribution to global financial institutions." },
+        { name: "NHL", detail: "First major sports league to sign a licensing deal with Kalshi (October 2025)." },
+        { name: "X (Twitter)", detail: "Polymarket as the official prediction markets partner, integrated with xAI." }
+      ],
+      relevanceTag: "Relevance",
+      relevanceTitle: "Why It Matters for Orbit",
+      relevanceList: [
+        { title: "Perfect Timing", text: "We are entering the early institutional adoption phase (Early Majority), not the speculative phase." },
+        { title: "Guaranteed Liquidity", text: "Institutional market makers allow executing strategies at scale without market impact up to $50-100M USD in AUM." },
+        { title: "Market Legitimacy", text: "Bloomberg, CNN, and Google already consider prediction markets legitimate sources of data." },
+        { title: "Growth Runway", text: "Market projected to grow 3-5x in 3 years. Infrastructure for a market validated by smart money." }
+      ]
+    },
+
+    // ── Why Now Page (Timing) ──
+    whyNow: {
+      heroTag: "Timing",
+      heroTitle: "Why Now?",
+      heroDesc: "Four massive forces are converging to create a once-in-a-decade opportunity.",
+      t1Tag: "Tailwind 1",
+      t1Title: "AI Agent Explosion",
+      t1Desc: "Autonomous AI agents are moving from demos to production. The world's largest companies are already deploying them — and they all require structured data as input.",
+      t1Agents: [
+        { name: "GPT-4 / OpenAI", detail: "Function-calling agents for research, trading, and ops." },
+        { name: "Claude / Anthropic", detail: "Computer-use agents navigating complex systems." },
+        { name: "Grok / xAI", detail: "Native X agent with access to real-time data." }
+      ],
+      t1DeployTitle: "Enterprise Deployments",
+      t1Deployments: [
+        { org: "Goldman Sachs", use: "Agents for research and due diligence" },
+        { org: "McKinsey", use: "Lilli — internal agent for 30K+ consultants" },
+        { org: "Walmart", use: "Agents for supply chain and pricing" },
+        { org: "Palantir AIP", use: "$1B ARR — agents for defense and enterprise" }
+      ],
+      t1InsightLabel: "Key insight:",
+      t1InsightText: "AI agents need structured context for LATAM — calibrated probabilities, regulatory data, political sentiment — and that context does not exist today. Orbit creates it.",
+      t2Tag: "Tailwind 2",
+      t2Title: "Grok and X: Real-Time Intelligence Stack",
+      t2Desc: "xAI Grok has native access to X (Twitter). Combined, they form the most powerful real-time intelligence stack in the world.",
+      t2List: [
+        "Native access to 500M+ daily posts on X",
+        "Real-time sentiment analysis",
+        "Mexico: X is the primary political platform",
+        "Grok converts data chaos into structured intelligence",
+        "24/7 monitoring of political and economic narratives"
+      ],
+      t2InsightLabel: "Our advantage:",
+      t2InsightText: "Orbit converts the chaos of 500M+ daily posts into structured, actionable intelligence for investors and corporates in LATAM.",
+      t3Tag: "Tailwind 3",
+      t3Title: "Prediction Markets Go Mainstream",
+      t3Desc: "The 2024 election was the turning point. Prediction markets moved from crypto niche to mainstream decision-making tool.",
+      t3Stats: [
+        { stat: "$3.6B", label: "Polymarket volume in 2024 election" },
+        { stat: "CFTC", label: "Regulatory validation of event contracts" },
+        { stat: "Metaculus", label: "Calibration standard for AI labs" }
+      ],
+      t3InsightLabel: "The problem:",
+      t3InsightText: "Prediction market data is fragmented across multiple platforms and is not packaged for enterprise consumption. There is no unified API, no cross-platform consensus, and no LATAM-focused analysis.",
+      t4Tag: "Tailwind 4",
+      t4Title: "Mexico's Political Moment",
+      t4Desc: "Mexico is experiencing its highest regulatory and political uncertainty in decades — exactly when demand for predictive intelligence is at its peak.",
+      t4List: [
+        "2026 midterm elections — 15 gubernatorial races",
+        "Judicial reform implementation — massive uncertainty",
+        "Energy policy transition — impact on $50B+ of investment",
+        "Nearshoring boom — $35B in 2024 investments",
+        "Mexico receives more FDI than China for the first time",
+        "Frequent public consultations and constitutional changes"
+      ],
+      t4Stats: [
+        { value: 35, suffix: "B", label: "FDI in Mexico 2024" },
+        { value: 15, suffix: "", label: "Gubernatorial Races 2026" },
+        { value: 50, suffix: "B+", label: "Investment impacted by energy policy" }
+      ],
+      t5Tag: "Orbit + AI",
+      t5Title: "Why Orbit Scales WITH AI",
+      t5Desc: "The \"SaaS dies with AI\" narrative doesn't apply when your product is primary data that no AI can generate on its own.",
+      t5List: [
+        { title: "API-First Pricing", text: "Pay per query/endpoint. More AI agents = more revenue. AI growth benefits us directly." },
+        { title: "Local Regulation Moat", text: "Understanding CNBV, INE, INEGI requires context that no LLM has out-of-the-box. Orbit packages that context." },
+        { title: "Console + APIs", text: "Humans use the console, agents use the API. Same data, two interfaces, double the market." },
+        { title: "Primary Consensus Data", text: "No AI can generate calibrated market probabilities — it requires real participants betting real money." }
+      ],
+      t5InsightLabel: "The thesis:",
+      t5InsightText: "Orbit provides primary consensus data — calibrated probabilities backed by real money — that no LLM can manufacture. More AI agents in the world = more customers for Orbit."
+    },
   },
 };
 
