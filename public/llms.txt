@@ -23,15 +23,12 @@
 
 - [El auge de los mercados de prediccion](https://orbitcapital.ai/blog/auge-mercados-prediccion-inteligencia-colectiva)
 - [Cobertura operativa con mercados de prediccion](https://orbitcapital.ai/blog/cobertura-operativa-mercados-prediccion-latam)
-- [Prediction markets como clase de activo para fondos cuantitativos](https://orbitcapital.ai/blog/prediction-markets-clase-activo-fondos-cuantitativos)
 - [Que es un Prediction Market](https://orbitcapital.ai/blog/que-es-un-prediction-market)
 - [Como Funciona un Prediction Market](https://orbitcapital.ai/blog/como-funciona-un-prediction-market)
-- [IA y Prediction Markets](https://orbitcapital.ai/blog/ia-y-prediction-markets)
 - [Que es un Quant Hedge Fund](https://orbitcapital.ai/blog/que-es-un-quant-hedge-fund)
 - [Prediction Markets vs Encuestas](https://orbitcapital.ai/blog/prediction-markets-vs-encuestas)
 - [Que es la Inteligencia Consensuada](https://orbitcapital.ai/blog/que-es-inteligencia-consensuada)
 - [Prediction Markets en LATAM](https://orbitcapital.ai/blog/prediction-markets-latam)
-- [Sentiment Analysis con IA](https://orbitcapital.ai/blog/sentiment-analysis-ia-finanzas)
 - [Guia para Invertir en Prediction Markets 2026](https://orbitcapital.ai/blog/guia-invertir-prediction-markets-2026)
 - [Datos Alternativos en Finanzas](https://orbitcapital.ai/blog/datos-alternativos-finanzas)
 
