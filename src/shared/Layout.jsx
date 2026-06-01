@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef, useCallback, lazy, Suspense } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTheme, getAccent, ACCENTS } from "./theme";
 import { useLang } from "./i18n";
 import { createStyles } from "./styles";
@@ -90,10 +90,10 @@ function MegaDropdown({ type, isDark, t, accent, onClose, i18n, openModal }) {
       : ACCENTS.intel[isDark ? "dark" : "light"];
 
   const capitalItems = [
-    { icon: "chart", title: i18n.nav.engine || "Engine", desc: i18n.nav.capitalEngineDesc || "Quantitative trading system", link: "/capital#engine" },
-    { icon: "trending", title: i18n.nav.performance || "Performance", desc: i18n.nav.capitalPerfDesc || "Risk-adjusted returns", link: "/capital#performance" },
-    { icon: "shield", title: i18n.nav.infraestructura || "Infrastructure", desc: i18n.nav.capitalInfraDesc || "Institutional from day one", link: "/capital#infra" },
-    { icon: "wallet", title: i18n.nav.terminos || "Terms", desc: i18n.nav.capitalTermsDesc || "Fund terms", link: "/capital#terms" },
+    { icon: "chart", title: i18n.nav.engine || "Engine", desc: i18n.nav.capitalEngineDesc || "Quantitative trading system", link: "/#engine" },
+    { icon: "trending", title: i18n.nav.performance || "Performance", desc: i18n.nav.capitalPerfDesc || "Risk-adjusted returns", link: "/#performance" },
+    { icon: "shield", title: i18n.nav.infraestructura || "Infrastructure", desc: i18n.nav.capitalInfraDesc || "Institutional from day one", link: "/#infra" },
+    { icon: "wallet", title: i18n.nav.terminos || "Terms", desc: i18n.nav.capitalTermsDesc || "Fund terms", link: "/#terms" },
     { icon: "globe", title: i18n.nav.mercado || "Market", desc: i18n.nav.capitalMarketDesc || "Market opportunity", link: "/capital/market" },
     { icon: "signal", title: i18n.nav.timing || "Timing", desc: i18n.nav.capitalTimingDesc || "Market timing analysis", link: "/capital/timing" },
   ];
@@ -344,6 +344,7 @@ export default function Layout({ children }) {
   const dropdownTimeoutRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const location = useLocation();
+  const navigate = useNavigate();
   const ctx = getContext(location.pathname);
   const accent = getAccent(ctx, mode);
   const posthog = usePostHog();
@@ -410,6 +411,38 @@ export default function Layout({ children }) {
   }, []);
 
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+  const handleHashLinkClick = (target) => {
+    const elementId = target.slice(1);
+    if (location.pathname === "/") {
+      scrollTo(elementId);
+    } else {
+      navigate("/" + target);
+    }
+  };
+
+  // Handle cross-page navigation with hash scrolling using polling
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      const elementId = location.hash.slice(1);
+      const startTime = performance.now();
+
+      let frameId;
+      const poll = () => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        } else if (performance.now() - startTime < 2000) {
+          frameId = requestAnimationFrame(poll);
+        }
+      };
+
+      frameId = requestAnimationFrame(poll);
+      return () => {
+        if (frameId) cancelAnimationFrame(frameId);
+      };
+    }
+  }, [location.pathname, location.hash]);
 
   const NAV_LINKS = getNavLinks(i18n);
   const navLinks = NAV_LINKS[ctx] || NAV_LINKS.default;
@@ -488,7 +521,7 @@ export default function Layout({ children }) {
 
     if (isHash) {
       return (
-        <button key={target} className="nav-link" onClick={() => scrollTo(target.slice(1))} style={{
+        <button key={target} className="nav-link" onClick={() => handleHashLinkClick(target)} style={{
           fontSize: navFontSize, color: t.textMuted, fontWeight: 600,
           background: "none", border: "none", padding: 0,
           cursor: "pointer", fontFamily: "inherit",
@@ -911,7 +944,7 @@ export default function Layout({ children }) {
                   return (
                     <button
                       key={target}
-                      onClick={() => { scrollTo(target.slice(1)); setMobileMenuOpen(false); }}
+                      onClick={() => { handleHashLinkClick(target); setMobileMenuOpen(false); }}
                       style={{
                         fontSize: 16, fontWeight: 500, color: t.text,
                         background: "none", border: "none",
@@ -1039,12 +1072,12 @@ export default function Layout({ children }) {
                 }}>{f.colCapital}</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   {[
-                    [f.elFondo, "/capital"],
+                    [f.elFondo, "/"],
                     [f.mercado, "/capital/market"],
                     [f.timing, "/capital/timing"],
-                    [f.orbitEngine, "/capital#engine"],
-                    [f.performance, "/capital#performance"],
-                    ["FAQ", "/capital#faq"],
+                    [f.orbitEngine, "/#engine"],
+                    [f.performance, "/#performance"],
+                    ["FAQ", "/#faq"],
                   ].map(([label, path]) => (
                     <Link key={path} to={path} className="nav-link" style={{
                       fontSize: 13, color: t.textDim, fontWeight: 500,
