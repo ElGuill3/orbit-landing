@@ -1,0 +1,30 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Tech stack: React 19 + Vite 7 (Vite plugin React), Supabase, PostHog, Vercel
+  Architecture: Component-presentational / SPA with custom layout
+  Testing: Playwright Python (test_frontend.py), Supabase Integration (tests/test-supabase-forms.mjs)
+  Style: Inline styles (styles.js) + CSS Variables (theme.js, layout.css)
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Document architecture decisions with rationale
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+  apply:
+    - Follow existing code patterns
+    tdd: true
+    test_command: "python3 test_frontend.py"
+  verify:
+    test_command: "python3 test_frontend.py"
+    build_command: "npm run build"
+    coverage_threshold: 0
+  archive:
+    - Warn before merging destructive deltas

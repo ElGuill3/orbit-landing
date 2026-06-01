@@ -1,0 +1,47 @@
+# Orbit Capital + Intelligence
+
+> For complete information, see [llms-full.txt](https://orbitcapital.ai/llms-full.txt)
+
+> Orbit is an ecosystem of predictive intelligence, operational hedging, and quantitative trading for Latin America, built on prediction markets.
+
+## Core Products
+
+- [Orbit Risk](https://orbitcapital.ai/risk): Operational hedging with prediction markets for businesses exposed to political, regulatory, and macroeconomic uncertainty in LATAM.
+- [Orbit Capital](https://orbitcapital.ai/capital): First LATAM quantitative fund specialized in prediction markets. 13 autonomous AI agents, 18% target return, Sharpe >1.5.
+- [Our Intelligence](https://orbitcapital.ai/intel): Proprietary internal intelligence platform powering the Orbit ecosystem. Knowledge Graphs, prediction markets, social sentiment, and alternative signals.
+
+## Key Pages
+
+- [Home](https://orbitcapital.ai/): Ecosystem overview
+- [Whitepaper](https://orbitcapital.ai/whitepaper): Investment thesis and technical architecture
+- [Agents](https://orbitcapital.ai/agents): 13 autonomous AI agents powering Orbit Capital
+- [Team](https://orbitcapital.ai/team): Founding leadership
+- [Moat](https://orbitcapital.ai/moat): Competitive advantages and differentiation
+- [Blog](https://orbitcapital.ai/blog): Research and analysis on prediction markets, intelligence, and quantitative trading
+
+## Blog Articles
+
+- [El auge de los mercados de prediccion](https://orbitcapital.ai/blog/auge-mercados-prediccion-inteligencia-colectiva)
+- [Cobertura operativa con mercados de prediccion](https://orbitcapital.ai/blog/cobertura-operativa-mercados-prediccion-latam)
+- [Prediction markets como clase de activo para fondos cuantitativos](https://orbitcapital.ai/blog/prediction-markets-clase-activo-fondos-cuantitativos)
+- [Que es un Prediction Market](https://orbitcapital.ai/blog/que-es-un-prediction-market)
+- [Como Funciona un Prediction Market](https://orbitcapital.ai/blog/como-funciona-un-prediction-market)
+- [IA y Prediction Markets](https://orbitcapital.ai/blog/ia-y-prediction-markets)
+- [Que es un Quant Hedge Fund](https://orbitcapital.ai/blog/que-es-un-quant-hedge-fund)
+- [Prediction Markets vs Encuestas](https://orbitcapital.ai/blog/prediction-markets-vs-encuestas)
+- [Que es la Inteligencia Consensuada](https://orbitcapital.ai/blog/que-es-inteligencia-consensuada)
+- [Prediction Markets en LATAM](https://orbitcapital.ai/blog/prediction-markets-latam)
+- [Sentiment Analysis con IA](https://orbitcapital.ai/blog/sentiment-analysis-ia-finanzas)
+- [Guia para Invertir en Prediction Markets 2026](https://orbitcapital.ai/blog/guia-invertir-prediction-markets-2026)
+- [Datos Alternativos en Finanzas](https://orbitcapital.ai/blog/datos-alternativos-finanzas)
+
+## Company Info
+
+- Location: Ciudad de Mexico, Mexico
+- Founded: 2025
+- Languages: Spanish (primary), English
+- Contact: invest@orbitcapital.ai (Capital), signals@orbitintelligence.ai (Intelligence)
+
+## How to Cite
+
+> Orbit Capital + Intelligence. (2025-2026). [Page or Article Title]. Retrieved from https://orbitcapital.ai/[path]

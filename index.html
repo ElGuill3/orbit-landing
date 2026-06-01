@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Google Search Console verification -->
+    <meta name="google-site-verification" content="ZqdDBeAGBQHXa46Kxft8j5L5F5Q7IPoD2LbfTLUEgLc" />
+
+    <!-- SEO Core -->
+    <title>Orbit — Prediction Markets Infrastructure for LATAM</title>
+    <meta name="description" content="Quantitative capital and risk systems for event-based markets. The first quant hedge fund focused on prediction markets in Latin America." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://orbitcapital.ai/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Orbit" />
+    <meta property="og:title" content="Orbit — Prediction Markets Infrastructure for LATAM" />
+    <meta property="og:description" content="Quantitative capital and risk systems for event-based markets. The first quant hedge fund focused on prediction markets in Latin America." />
+    <meta property="og:url" content="https://orbitcapital.ai/" />
+    <meta property="og:image" content="https://orbitcapital.ai/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Orbit — Building the prediction markets infrastructure for LATAM" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@orbitcapitalai" />
+    <meta name="twitter:title" content="Orbit — Prediction Markets Infrastructure for LATAM" />
+    <meta name="twitter:description" content="Quantitative capital and risk systems for event-based markets." />
+    <meta name="twitter:image" content="https://orbitcapital.ai/og-image.png" />
+
+    <!-- GEO: Entity & Knowledge Graph signals -->
+    <meta name="author" content="Orbit Capital + Intelligence" />
+    <meta name="geo.region" content="MX-CMX" />
+    <meta name="geo.placename" content="Ciudad de México" />
+    <meta name="geo.position" content="19.4326;-99.1332" />
+    <meta name="ICBM" content="19.4326, -99.1332" />
+    <meta name="subject" content="Prediction Markets, Quantitative Trading, Business Intelligence, Risk Management, LATAM" />
+    <meta name="classification" content="Financial Technology" />
+    <meta name="coverage" content="Latin America" />
+    <meta name="language" content="Spanish, English" />
+
+    <!-- Theme & Mobile -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Preload LCP image (the Orbit logo used in hero/nav) -->
+    <link rel="preload" as="image" href="/orbit-logo-dark.png" fetchpriority="high" />
+
+    <!-- Critical CSS: font fallback + hero shell (visible before JS hydrates) -->
+    <style>
+      @font-face {
+        font-family: 'DM Sans Fallback';
+        src: local('Arial');
+        size-adjust: 96%;
+        ascent-override: 95%;
+        descent-override: 25%;
+        line-gap-override: 0%;
+      }
+      @font-face {
+        font-family: 'JetBrains Mono Fallback';
+        src: local('Courier New');
+        size-adjust: 98%;
+        ascent-override: 92%;
+        descent-override: 24%;
+        line-gap-override: 0%;
+      }
+      html { font-family: 'DM Sans', 'DM Sans Fallback', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif; }
+      body { margin: 0; padding: 0; background: #000000; color: #fafafa; }
+      #root { min-height: 100vh; }
+      /* Pre-render shell: shown until React mounts */
+      #shell { position: relative; min-height: 100vh; display: flex; flex-direction: column; }
+      #shell .shell-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 24px; height: 64px; display: flex; align-items: center; background: rgba(0,0,0,0.45); backdrop-filter: blur(40px) saturate(200%); -webkit-backdrop-filter: blur(40px) saturate(200%); }
+      #shell .shell-nav img { height: 32px; width: auto; }
+      #shell .shell-hero { flex: 1; display: flex; align-items: center; padding: 80px 24px 40px; max-width: 1180px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+      #shell .shell-hero h1 { font-size: clamp(42px, 6vw, 76px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin: 0; color: #fafafa; }
+      #shell .shell-hero .accent { background: linear-gradient(90deg, #10B981, #0891B2, #10B981); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+      #shell .shell-sub { font-size: clamp(15px, 2vw, 18px); color: #a1a1aa; line-height: 1.7; margin: 16px 0 0; max-width: 640px; }
+      /* Hide shell when React has rendered */
+      #root:not(:empty) ~ #shell { display: none; }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZSQKMW7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div id="root"></div>
+    <!-- Pre-rendered shell: immediate FCP/LCP before JS loads -->
+    <div id="shell" aria-hidden="true">
+      <nav class="shell-nav">
+        <img src="/orbit-logo-dark.png" alt="Orbit" width="144" height="32" fetchpriority="high" />
+      </nav>
+      <div class="shell-hero">
+        <div>
+          <h1>Operamos mercados de predicci&oacute;n. <span class="accent">Con inteligencia artificial.</span></h1>
+          <p class="shell-sub">Inteligencia, cobertura y capital cuantitativo para empresas en Am&eacute;rica Latina. Todo impulsado por mercados de predicci&oacute;n y agentes de IA.</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+        <!-- GTM deferred to after page is interactive -->
+    <script src="/ga-loader.js" defer></script>
+  </body>
+</html>

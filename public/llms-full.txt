@@ -1,0 +1,166 @@
+# Orbit Capital + Intelligence — Complete Information
+
+> For a concise summary, see [llms.txt](https://orbitcapital.ai/llms.txt)
+
+Orbit is an ecosystem of predictive intelligence, operational hedging, and quantitative trading for Latin America, built on prediction markets. Founded in 2025, headquartered in Ciudad de Mexico, Mexico.
+
+---
+
+## Core Products
+
+### Orbit Risk
+**Operational hedging with prediction markets for LATAM businesses.**
+
+Orbit Risk converts regulatory, political, tariff, and macroeconomic risks into executable hedges using prediction markets (Polymarket, Kalshi). Designed for companies with operations exposed to uncertainty in Latin America.
+
+- **Coverage types**: Tariffs & US-LATAM trade policy, MXN/USD exchange rate, financial regulation (CNBV, SHCP), energy policy, nearshoring disruptions, political & electoral risk, commodities/supply chain
+- **How it works**: Risk assessment → exposure mapping → hedge construction via prediction market positions → 24/7 monitoring and rebalancing
+- **Key differentiator**: Transparent, liquid, and precise — unlike traditional OTC derivatives
+- **URL**: https://orbitcapital.ai/risk
+
+### Orbit Capital
+**First LATAM quantitative fund specialized in prediction markets.**
+
+An agentic hedge fund powered by 13 autonomous AI agents that consume Orbit's unified Knowledge Graph to trade prediction markets.
+
+- **Target return**: 18% net annual
+- **Sharpe Ratio**: >1.5 (backtested)
+- **Max drawdown**: <15%
+- **S&P 500 correlation**: <0.2
+- **Minimum investment**: $1M MXN (~$57K USD)
+- **Management fee**: 2.5% annual
+- **Performance fee**: 20% over 8% hurdle rate (high-water mark)
+- **Monthly liquidity**: 30-day notice
+- **Infrastructure**: Fireblocks (custody), TRES FinOS (accounting), Grafana LP dashboard
+- **Contact**: invest@orbitcapital.ai
+- **URL**: https://orbitcapital.ai/capital
+
+### Our Intelligence
+**Proprietary internal intelligence platform powering the Orbit ecosystem.**
+
+Our Intelligence is not a commercial product or SaaS — it is the internal infrastructure that feeds both Orbit Capital and Orbit Risk.
+
+- **Data sources**: Real-time prediction market probabilities, social sentiment from X (via Grok), official data (INEGI, Banxico, DOF), alternative signals
+- **Architecture**: Unified Knowledge Graph with 5 node types (Entity, Event, Market, Asset, Source) and 5 edge types (Exposure, Correlation, Position, Dependency, Signal)
+- **Coverage**: 7 market verticals
+- **Contact**: signals@orbitintelligence.ai
+- **URL**: https://orbitcapital.ai/intel
+
+---
+
+## 13 Autonomous AI Agents
+
+Orbit Capital operates through 13 autonomous AI agents, each named after celestial bodies:
+
+### Graph Layer
+1. **Atlas** — Graph Architect: Builds and maintains the unified Knowledge Graph with five node types and five edge types.
+
+### Data Layer
+2. **Sirius** — Data Ingestion: Feeds the Knowledge Graph with prediction market data, order books, and institutional feeds.
+3. **Kepler** — Social Scanner: Processes X sentiment (powered by Grok) and detects narrative shifts.
+4. **Proxima** — Real-time Data: Alternative data sourcing and enrichment — regulatory flows, LATAM news, macro data, geopolitical events.
+
+### Intelligence Layer
+5. **Vega** — Signal Generator: Consumes the Knowledge Graph to generate trading signals with quantified expected value.
+6. **Trappist** — Pattern Recognition: Multi-dimensional pattern detection, probability estimation, market regime recognition, and forecasting.
+
+### Execution Layer
+7. **Rigel** — Trade Executor: Executes trades across Polymarket and Kalshi with sub-second cycles.
+8. **Gliese** — Arbitrage & Settlement: Cross-market arbitrage detection, position reconciliation, and settlement management.
+
+### Risk Layer
+9. **Polaris** — Override Authority: Has override authority over all execution agents. Kill-switches, exposure monitoring, risk limit enforcement.
+10. **Altair** — Portfolio Manager: Macro-level portfolio management — dynamic rebalancing, correlation analysis, drawdown management.
+
+### Operations Layer
+11. **Centauri** — Orchestrator: Orchestrates all 13 agents — task routing, scheduling, compliance monitoring, audit trails.
+12. **Cassiopeia** — Reporting: Generates performance reports, market analysis, and fund documentation automatically.
+13. **Andromeda** — Communications: CRM, investor relations, social media content, newsletters, external communications.
+
+**URL**: https://orbitcapital.ai/agents
+
+---
+
+## Blog Articles
+
+### Category: INTEL
+- [El auge de los mercados de prediccion: como la inteligencia colectiva esta transformando la toma de decisiones](https://orbitcapital.ai/blog/auge-mercados-prediccion-inteligencia-colectiva) — What prediction markets are, why they outperform polls, and implications for LATAM decision-making.
+- [Por que la inteligencia artificial es fundamental en un prediction market](https://orbitcapital.ai/blog/ia-y-prediction-markets) — How AI transforms prediction markets through systematic trading signals, real-time sentiment analysis, and autonomous agents.
+- [Que es la inteligencia consensuada](https://orbitcapital.ai/blog/que-es-inteligencia-consensuada) — Consensus intelligence combines market probabilities, sentiment analysis, and AI for better forecasting.
+- [Como los mercados de prediccion estan transformando la toma de decisiones en LATAM](https://orbitcapital.ai/blog/prediction-markets-latam) — LATAM institutions already use prediction market data for monetary policy, regulatory reform, and investment decisions.
+- [Sentiment analysis con IA: como el analisis de sentimiento esta transformando las finanzas](https://orbitcapital.ai/blog/sentiment-analysis-ia-finanzas) — How AI-powered sentiment analysis is changing how investors and funds predict market movements.
+
+### Category: RISK
+- [Cobertura operativa con mercados de prediccion: una nueva era de gestion de riesgos para LATAM](https://orbitcapital.ai/blog/cobertura-operativa-mercados-prediccion-latam) — Prediction markets as hedging instruments for political, regulatory, and macroeconomic risks in LATAM.
+
+### Category: CAPITAL
+- [Prediction markets como instrumento financiero: por que los fondos cuantitativos estan apostando](https://orbitcapital.ai/blog/prediction-markets-clase-activo-fondos-cuantitativos) — The case for quantitative strategies in prediction markets: low correlation, structural inefficiencies, accelerating growth.
+- [Que es un quant hedge fund](https://orbitcapital.ai/blog/que-es-un-quant-hedge-fund) — Everything about quantitative hedge funds: mathematical models, statistical analysis, and algorithms for consistent returns.
+- [Guia completa para invertir en prediction markets en 2026](https://orbitcapital.ai/blog/guia-invertir-prediction-markets-2026) — Comprehensive guide: platforms, strategies, risk management, legal aspects, and institutional access.
+
+### Category: EDUCATION
+- [Que es un prediction market](https://orbitcapital.ai/blog/que-es-un-prediction-market) — Definitive guide to understanding prediction markets and how contract prices reflect event probabilities.
+- [Como funciona un prediction market](https://orbitcapital.ai/blog/como-funciona-un-prediction-market) — Mechanics of prediction markets: binary contracts, price formation, microstructure, liquidity, and use cases.
+- [Prediction markets vs encuestas tradicionales](https://orbitcapital.ai/blog/prediction-markets-vs-encuestas) — Comparing prediction markets and traditional polls: accuracy, speed, and cost analysis.
+- [El futuro de los datos alternativos en finanzas](https://orbitcapital.ai/blog/datos-alternativos-finanzas) — From satellite imagery to prediction markets: how alternative data is transforming finance.
+
+---
+
+## Whitepaper / Investment Thesis
+
+**Title**: Infrastructure of Predictive Intelligence, Hedging & Trading for Emerging Markets
+
+The Orbit ecosystem thesis rests on three pillars:
+1. **Knowledge Graph as core infrastructure** — A unified graph connecting entities, events, markets, assets, and sources that compounds with every operation.
+2. **Agentic alpha generation** — 13 autonomous agents that navigate the Knowledge Graph to trade, each with own wallet and decision authority under zero-trust architecture.
+3. **Prediction markets as ideal arena** — Total transparency, instant settlement, <0.2 correlation with traditional markets, structural inefficiencies that reward quantitative approaches.
+
+**URL**: https://orbitcapital.ai/whitepaper
+
+---
+
+## Competitive Advantages (Moat)
+
+1. **Integrated ecosystem**: Intel feeds Risk and Capital, creating compounding data advantages
+2. **Proprietary Knowledge Graph**: Becomes more valuable with each operation and data point
+3. **Spanish-first positioning**: Deep LATAM context that global competitors lack
+4. **Institutional infrastructure from day one**: Fireblocks custody, regulated venues (CFTC), institutional-grade operations
+5. **Agentic architecture**: 13 specialized agents > monolithic algorithms
+
+**URL**: https://orbitcapital.ai/moat
+
+---
+
+## Key Pages
+
+- [Home](https://orbitcapital.ai/) — Ecosystem overview
+- [Orbit Risk](https://orbitcapital.ai/risk) — Operational hedging product
+- [Orbit Capital](https://orbitcapital.ai/capital) — Quantitative fund
+- [Our Intelligence](https://orbitcapital.ai/intel) — Intelligence platform
+- [Agents](https://orbitcapital.ai/agents) — 13 autonomous AI agents
+- [Whitepaper](https://orbitcapital.ai/whitepaper) — Investment thesis
+- [Moat](https://orbitcapital.ai/moat) — Competitive advantages
+- [Team](https://orbitcapital.ai/team) — Founding leadership
+- [Blog](https://orbitcapital.ai/blog) — Research and analysis
+
+---
+
+## Company Information
+
+- **Legal entity**: Orbit Predictive Technologies, LLC
+- **Location**: Ciudad de Mexico, Mexico
+- **Founded**: 2025
+- **Languages**: Spanish (primary), English
+- **Contact**:
+  - Capital inquiries: invest@orbitcapital.ai
+  - Intelligence inquiries: signals@orbitintelligence.ai
+- **Social**:
+  - X (Twitter): https://x.com/orbitcapitalai
+  - LinkedIn: https://linkedin.com/company/orbitcapitalai
+  - Telegram: https://t.me/orbitcapitalai
+
+---
+
+## How to Cite
+
+> Orbit Capital + Intelligence. (2025-2026). [Page or Article Title]. Retrieved from https://orbitcapital.ai/[path]
