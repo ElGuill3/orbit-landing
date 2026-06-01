@@ -23,10 +23,12 @@ const PitchPage = lazy(() => import("./pages/pitch/PitchPage"));
 const InvestPage = lazy(() => import("./pages/invest/InvestPage"));
 
 function ScrollToTop() {
-    const { pathname } = useLocation();
+    const { pathname, hash } = useLocation();
     useEffect(() => {
-          window.scrollTo(0, 0);
-    }, [pathname]);
+        if (!hash) {
+            window.scrollTo(0, 0);
+        }
+    }, [pathname, hash]);
     return null;
 }
 
