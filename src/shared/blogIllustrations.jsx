@@ -2125,15 +2125,12 @@ export function AltDataIllustration({ isDark = true }) {
 const ILLUSTRATION_MAP = {
   "auge-mercados-prediccion-inteligencia-colectiva": IntelIllustration,
   "cobertura-operativa-mercados-prediccion-latam": RiskIllustration,
-  "prediction-markets-clase-activo-fondos-cuantitativos": CapitalIllustration,
   "que-es-un-prediction-market": PredictionMarketIllustration,
   "como-funciona-un-prediction-market": MechanicsPredictionIllustration,
-  "ia-y-prediction-markets": AINetworkIllustration,
   "que-es-un-quant-hedge-fund": QuantFundIllustration,
   "prediction-markets-vs-encuestas": PMvsEncuestasIllustration,
   "que-es-inteligencia-consensuada": ConsensusIntelIllustration,
   "prediction-markets-latam": PMLatamIllustration,
-  "sentiment-analysis-ia-finanzas": SentimentAnalysisIllustration,
   "guia-invertir-prediction-markets-2026": InvestGuideIllustration,
   "datos-alternativos-finanzas": AltDataIllustration,
 };

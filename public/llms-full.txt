@@ -85,16 +85,13 @@ Orbit Capital operates through 13 autonomous AI agents, each named after celesti
 
 ### Category: INTEL
 - [El auge de los mercados de prediccion: como la inteligencia colectiva esta transformando la toma de decisiones](https://orbitcapital.ai/blog/auge-mercados-prediccion-inteligencia-colectiva) — What prediction markets are, why they outperform polls, and implications for LATAM decision-making.
-- [Por que la inteligencia artificial es fundamental en un prediction market](https://orbitcapital.ai/blog/ia-y-prediction-markets) — How AI transforms prediction markets through systematic trading signals, real-time sentiment analysis, and autonomous agents.
 - [Que es la inteligencia consensuada](https://orbitcapital.ai/blog/que-es-inteligencia-consensuada) — Consensus intelligence combines market probabilities, sentiment analysis, and AI for better forecasting.
 - [Como los mercados de prediccion estan transformando la toma de decisiones en LATAM](https://orbitcapital.ai/blog/prediction-markets-latam) — LATAM institutions already use prediction market data for monetary policy, regulatory reform, and investment decisions.
-- [Sentiment analysis con IA: como el analisis de sentimiento esta transformando las finanzas](https://orbitcapital.ai/blog/sentiment-analysis-ia-finanzas) — How AI-powered sentiment analysis is changing how investors and funds predict market movements.
 
 ### Category: RISK
 - [Cobertura operativa con mercados de prediccion: una nueva era de gestion de riesgos para LATAM](https://orbitcapital.ai/blog/cobertura-operativa-mercados-prediccion-latam) — Prediction markets as hedging instruments for political, regulatory, and macroeconomic risks in LATAM.
 
 ### Category: CAPITAL
-- [Prediction markets como instrumento financiero: por que los fondos cuantitativos estan apostando](https://orbitcapital.ai/blog/prediction-markets-clase-activo-fondos-cuantitativos) — The case for quantitative strategies in prediction markets: low correlation, structural inefficiencies, accelerating growth.
 - [Que es un quant hedge fund](https://orbitcapital.ai/blog/que-es-un-quant-hedge-fund) — Everything about quantitative hedge funds: mathematical models, statistical analysis, and algorithms for consistent returns.
 - [Guia completa para invertir en prediction markets en 2026](https://orbitcapital.ai/blog/guia-invertir-prediction-markets-2026) — Comprehensive guide: platforms, strategies, risk management, legal aspects, and institutional access.
 
