@@ -15,7 +15,7 @@
         "@vercel/analytics": "^2.0.1",
         "@vercel/og": "^0.10.0",
         "@vercel/speed-insights": "^2.0.0",
-        "posthog-js": "^1.367.0",
+        "posthog-js": "^1.399.2",
         "react": "^19.2.5",
         "react-dom": "^19.2.5",
         "react-router-dom": "^7.14.1"
