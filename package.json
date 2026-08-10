@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "@posthog/react": "^1.8.1",
-        "@supabase/supabase-js": "^2.103.0",
+        "@supabase/supabase-js": "^2.112.2",
         "@vercel/analytics": "^2.0.1",
         "@vercel/og": "^0.10.0",
         "@vercel/speed-insights": "^2.0.0",
